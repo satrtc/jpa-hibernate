@@ -1,4 +1,4 @@
-package com.spring_boot.jpa_hibernate.jpa_hibernate.course;
+package com.spring_boot.jpa_hibernate.jpa_hibernat.spring_jdbc;
 
 public class Course {
 

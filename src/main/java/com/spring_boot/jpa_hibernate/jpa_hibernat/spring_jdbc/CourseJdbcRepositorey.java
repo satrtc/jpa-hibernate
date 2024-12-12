@@ -1,10 +1,8 @@
-package com.spring_boot.jpa_hibernate.jpa_hibernate.spring_jdbc;
+package com.spring_boot.jpa_hibernate.jpa_hibernat.spring_jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
-import com.spring_boot.jpa_hibernate.jpa_hibernate.course.Course;
 
 @Repository
 public class CourseJdbcRepositorey {
@@ -24,7 +22,7 @@ public class CourseJdbcRepositorey {
 			""";
 	private String DELETE_QUERY=
 			"""
-			delete from course where id=?;
+			delete from course where id=?
 			""";
 	
 	public void insert()
@@ -37,7 +35,7 @@ public class CourseJdbcRepositorey {
 		jdbcTemplate.update(INSERT_QUERY2,course.getId(),course.getName(),course.getAuthor());
 	}
 	
-	public void deleteCourse(int id)
+	public void deleteCourse(long id)
 	{
 		jdbcTemplate.update(DELETE_QUERY,id);
 	}
