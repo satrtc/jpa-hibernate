@@ -1,6 +1,5 @@
 package com.spring_boot.spring_jpa;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 

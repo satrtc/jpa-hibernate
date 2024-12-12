@@ -17,4 +17,15 @@ public class CourseJpaRepositary {
 	{
 		entityManager.merge(course);
 	}
+	
+	public Course findById(long id)
+	{
+		return entityManager.find(Course.class, id);
+	}
+	
+	public void deleteById(long id)
+	{
+		Course course=findById(id);
+		 entityManager.remove(course);
+	}
 }
